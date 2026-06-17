@@ -1,30 +1,51 @@
 [
   {
     "name": "Wine / Grape Juice — HaGafen",
-    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, בורא פרי הגפן\nBaruch atah Adonai Eloheinu melech ha'olam, borei p'ri hagafen.\nBlessed are You, Adonai our God, Ruler of the universe, who creates the fruit of the vine."
+    "hebrewPlain": "ברוך אתה יהוה אלהינו מלך העולם, בורא פרי הגפן",
+    "hebrewNikkud": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הַגָּפֶן",
+    "transliteration": "Baruch atah Adonai Eloheinu melech ha'olam, borei p'ri hagafen.",
+    "translation": "Blessed are You, Adonai our God, Ruler of the universe, who creates the fruit of the vine."
   },
   {
     "name": "Bread — HaMotzi",
-    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, המוציא לחם מן הארץ\nBaruch atah Adonai Eloheinu melech ha'olam, hamotzi lechem min ha'aretz.\nBlessed are You, Adonai our God, Ruler of the universe, who brings forth bread from the earth."
+    "hebrewPlain": "ברוך אתה יהוה אלהינו מלך העולם, המוציא לחם מן הארץ",
+    "hebrewNikkud": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ",
+    "transliteration": "Baruch atah Adonai Eloheinu melech ha'olam, hamotzi lechem min ha'aretz.",
+    "translation": "Blessed are You, Adonai our God, Ruler of the universe, who brings forth bread from the earth."
   },
   {
     "name": "Fruit of the Tree — Ha'etz",
-    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, בורא פרי העץ\nBaruch atah Adonai Eloheinu melech ha'olam, borei p'ri ha'etz.\nBlessed are You, Adonai our God, Ruler of the universe, who creates the fruit of the tree."
+    "hebrewPlain": "ברוך אתה יהוה אלהינו מלך העולם, בורא פרי העץ",
+    "hebrewNikkud": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הָעֵץ",
+    "transliteration": "Baruch atah Adonai Eloheinu melech ha'olam, borei p'ri ha'etz.",
+    "translation": "Blessed are You, Adonai our God, Ruler of the universe, who creates the fruit of the tree."
   },
   {
     "name": "Fruit of the Ground — Ha'adamah",
-    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, בורא פרי האדמה\nBaruch atah Adonai Eloheinu melech ha'olam, borei p'ri ha'adamah.\nBlessed are You, Adonai our God, Ruler of the universe, who creates the fruit of the ground."
+    "hebrewPlain": "ברוך אתה יהוה אלהינו מלך העולם, בורא פרי האדמה",
+    "hebrewNikkud": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְּרִי הָאֲדָמָה",
+    "transliteration": "Baruch atah Adonai Eloheinu melech ha'olam, borei p'ri ha'adamah.",
+    "translation": "Blessed are You, Adonai our God, Ruler of the universe, who creates the fruit of the ground."
   },
   {
     "name": "Other Foods — Shehakol",
-    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, שהכל נהיה בדברו\nBaruch atah Adonai Eloheinu melech ha'olam, shehakol nih'yah bidvaro.\nBlessed are You, Adonai our God, Ruler of the universe, by whose word all things came to be."
+    "hebrewPlain": "ברוך אתה יהוה אלהינו מלך העולם, שהכל נהיה בדברו",
+    "hebrewNikkud": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁהַכֹּל נִהְיָה בִּדְבָרוֹ",
+    "transliteration": "Baruch atah Adonai Eloheinu melech ha'olam, shehakol nih'yah bidvaro.",
+    "translation": "Blessed are You, Adonai our God, Ruler of the universe, by whose word all things came to be."
   },
   {
     "name": "Candle Lighting — Shabbat",
-    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, אשר קדשנו במצותיו וצונו להדליק נר של שבת\nBaruch atah Adonai Eloheinu melech ha'olam, asher kid'shanu b'mitzvotav v'tzivanu l'hadlik ner shel Shabbat.\nBlessed are You, Adonai our God, Ruler of the universe, who sanctifies us with mitzvot and commands us to kindle the light of Shabbat."
+    "hebrewPlain": "ברוך אתה יהוה אלהינו מלך העולם, אשר קדשנו במצותיו וצונו להדליק נר של שבת",
+    "hebrewNikkud": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת",
+    "transliteration": "Baruch atah Adonai Eloheinu melech ha'olam, asher kid'shanu b'mitzvotav v'tzivanu l'hadlik ner shel Shabbat.",
+    "translation": "Blessed are You, Adonai our God, Ruler of the universe, who sanctifies us with mitzvot and commands us to kindle the light of Shabbat."
   },
   {
     "name": "Torah Study",
-    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, אשר קדשנו במצותיו וצונו לעסוק בדברי תורה\nBaruch atah Adonai Eloheinu melech ha'olam, asher kid'shanu b'mitzvotav v'tzivanu la'asok b'divrei Torah.\nBlessed are You, Adonai our God, Ruler of the universe, who sanctifies us with mitzvot and commands us to engage in the study of Torah."
+    "hebrewPlain": "ברוך אתה יהוה אלהינו מלך העולם, אשר קדשנו במצותיו וצונו לעסוק בדברי תורה",
+    "hebrewNikkud": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לַעֲסוֹק בְּדִבְרֵי תוֹרָה",
+    "transliteration": "Baruch atah Adonai Eloheinu melech ha'olam, asher kid'shanu b'mitzvotav v'tzivanu la'asok b'divrei Torah.",
+    "translation": "Blessed are You, Adonai our God, Ruler of the universe, who sanctifies us with mitzvot and commands us to engage in the study of Torah."
   }
 ]

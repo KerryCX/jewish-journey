@@ -72,6 +72,20 @@
         font-size: 2rem;
         font-weight: 500;
       }
+      .toggles {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin: 0 0 12px 0;
+        font-size: 0.85rem;
+      }
+      .toggles label {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+      }
       .placeholder {
         color: var(--text-tertiary);
         font-style: italic;
@@ -90,6 +104,17 @@
         <option value="">choose a blessing</option>
       </select>
 
+      <div class="toggles" id="toggles" hidden>
+        <label><input type="checkbox" id="toggleNikkud" /> Nikkud</label>
+        <label
+          ><input type="checkbox" id="toggleTransliteration" />
+          Transliteration</label
+        >
+        <label
+          ><input type="checkbox" id="toggleTranslation" /> Translation</label
+        >
+      </div>
+
       <div id="output">
         <p class="placeholder">Select a blessing above to see its text.</p>
       </div>
@@ -97,11 +122,55 @@
     <script>
       const select = document.getElementById("blessingSelect");
       const output = document.getElementById("output");
+      const toggles = document.getElementById("toggles");
+      const toggleNikkud = document.getElementById("toggleNikkud");
+      const toggleTransliteration = document.getElementById(
+        "toggleTransliteration",
+      );
+      const toggleTranslation = document.getElementById("toggleTranslation");
+
+      let blessings = [];
+
+      function addLine(text, isHebrew) {
+        const p = document.createElement("p");
+        if (isHebrew) {
+          p.classList.add("hebrew");
+          p.setAttribute("lang", "he");
+          p.setAttribute("dir", "rtl");
+        } else {
+          p.setAttribute("lang", "en");
+          p.setAttribute("dir", "ltr");
+        }
+        p.textContent = text;
+        output.appendChild(p);
+      }
+
+      function render() {
+        if (select.value === "") {
+          output.innerHTML =
+            '<p class="placeholder">Select a blessing above to see its text.</p>';
+          toggles.hidden = true;
+          return;
+        }
+
+        toggles.hidden = false;
+        const item = blessings[select.value];
+        output.innerHTML = "";
+
+        const hebrewLine = toggleNikkud.checked
+          ? item.hebrewNikkud
+          : item.hebrewPlain;
+        addLine(hebrewLine, true);
+
+        if (toggleTransliteration.checked) addLine(item.transliteration, false);
+        if (toggleTranslation.checked) addLine(item.translation, false);
+      }
 
       // Fetch the JSON file and use it to populate the dropdown
       fetch("blessings.json")
         .then((response) => response.json())
         .then((data) => {
+          blessings = data;
           data.forEach((item, index) => {
             const option = document.createElement("option");
             option.value = index; // store the array index as the value
@@ -109,31 +178,10 @@
             select.appendChild(option);
           });
 
-          // When the user picks an option, look up that item and display its text
-          select.addEventListener("change", () => {
-            if (select.value === "") {
-              output.innerHTML =
-                '<p class="placeholder">Select a blessing above to see its text.</p>';
-              return;
-            }
-            const chosen = data[select.value];
-            output.innerHTML = "";
-            // Split on newlines so Hebrew / transliteration / translation each get their own line
-            chosen.blessingText.split("\n").forEach((line) => {
-              const p = document.createElement("p");
-              const isHebrew = /[\u0590-\u05FF]/.test(line);
-              if (isHebrew) {
-                p.classList.add("hebrew");
-                p.setAttribute("lang", "he");
-                p.setAttribute("dir", "rtl");
-              } else {
-                p.setAttribute("lang", "en");
-                p.setAttribute("dir", "ltr");
-              }
-              p.textContent = line;
-              output.appendChild(p);
-            });
-          });
+          select.addEventListener("change", render);
+          toggleNikkud.addEventListener("change", render);
+          toggleTransliteration.addEventListener("change", render);
+          toggleTranslation.addEventListener("change", render);
         })
         .catch((err) => {
           output.innerHTML =
