@@ -131,7 +131,7 @@
 
       let blessings = [];
 
-      function addLine(text, isHebrew) {
+      const addLine = (text, isHebrew) => {
         const p = document.createElement("p");
         if (isHebrew) {
           p.classList.add("hebrew");
@@ -143,9 +143,9 @@
         }
         p.textContent = text;
         output.appendChild(p);
-      }
+      };
 
-      function render() {
+      const render = () => {
         if (select.value === "") {
           output.innerHTML =
             '<p class="placeholder">Select a blessing above to see its text.</p>';
@@ -164,7 +164,7 @@
 
         if (toggleTransliteration.checked) addLine(item.transliteration, false);
         if (toggleTranslation.checked) addLine(item.translation, false);
-      }
+      };
 
       // Fetch the JSON file and use it to populate the dropdown
       fetch("blessings.json")
