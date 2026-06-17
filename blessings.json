@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Wine / Grape Juice — HaGafen",
+    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, בורא פרי הגפן\nBaruch atah Adonai Eloheinu melech ha'olam, borei p'ri hagafen.\nBlessed are You, Adonai our God, Ruler of the universe, who creates the fruit of the vine."
+  },
+  {
+    "name": "Bread — HaMotzi",
+    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, המוציא לחם מן הארץ\nBaruch atah Adonai Eloheinu melech ha'olam, hamotzi lechem min ha'aretz.\nBlessed are You, Adonai our God, Ruler of the universe, who brings forth bread from the earth."
+  },
+  {
+    "name": "Fruit of the Tree — Ha'etz",
+    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, בורא פרי העץ\nBaruch atah Adonai Eloheinu melech ha'olam, borei p'ri ha'etz.\nBlessed are You, Adonai our God, Ruler of the universe, who creates the fruit of the tree."
+  },
+  {
+    "name": "Fruit of the Ground — Ha'adamah",
+    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, בורא פרי האדמה\nBaruch atah Adonai Eloheinu melech ha'olam, borei p'ri ha'adamah.\nBlessed are You, Adonai our God, Ruler of the universe, who creates the fruit of the ground."
+  },
+  {
+    "name": "Other Foods — Shehakol",
+    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, שהכל נהיה בדברו\nBaruch atah Adonai Eloheinu melech ha'olam, shehakol nih'yah bidvaro.\nBlessed are You, Adonai our God, Ruler of the universe, by whose word all things came to be."
+  },
+  {
+    "name": "Candle Lighting — Shabbat",
+    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, אשר קדשנו במצותיו וצונו להדליק נר של שבת\nBaruch atah Adonai Eloheinu melech ha'olam, asher kid'shanu b'mitzvotav v'tzivanu l'hadlik ner shel Shabbat.\nBlessed are You, Adonai our God, Ruler of the universe, who sanctifies us with mitzvot and commands us to kindle the light of Shabbat."
+  },
+  {
+    "name": "Torah Study",
+    "blessingText": "ברוך אתה יהוה אלהינו מלך העולם, אשר קדשנו במצותיו וצונו לעסוק בדברי תורה\nBaruch atah Adonai Eloheinu melech ha'olam, asher kid'shanu b'mitzvotav v'tzivanu la'asok b'divrei Torah.\nBlessed are You, Adonai our God, Ruler of the universe, who sanctifies us with mitzvot and commands us to engage in the study of Torah."
+  }
+]
