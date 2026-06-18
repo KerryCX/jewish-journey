@@ -47,6 +47,20 @@ Add a new entry to `src/data/blessings.json` following the existing shape:
 }
 ```
 
+## Custom theme tokens
+
+`src/index.css` defines a small custom palette via Tailwind v4's `@theme` directive, rather than using Tailwind's default colors, so the look stays consistent and intentional:
+
+| Token           | Value            | Used for                    |
+| --------------- | ---------------- | --------------------------- |
+| `bg-base`       | `#d6fdff`        | Page background             |
+| `text-ink`      | `#000250`        | Primary text                |
+| `bg-surface`    | `#f5ffff`        | Card / surface background   |
+| `border-line`   | `#5c8bb8`        | Default border              |
+| `text-ink-soft` | `#001e68`        | Secondary text (tagline)    |
+| `text-accent`   | `#005eb8`        | Tertiary text (placeholder) |
+| `font-hebrew`   | Frank Ruhl Libre | Hebrew text                 |
+
 ## License
 
 See [LICENSE](./LICENSE).
