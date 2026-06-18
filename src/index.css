@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #d6fdff;       /* page background */
+  --color-ink: #000250;        /* primary text */
+  --color-surface: #f5ffff;    /* card/surface background */
+  --color-line: #5c8bb8;       /* default border */
+  --color-ink-soft: #001e68;   /* secondary text (tagline) */
+  --color-accent: #005eb8;     /* tertiary text (placeholder) */
+
+  --font-hebrew: "Frank Ruhl Libre", serif;
+}
