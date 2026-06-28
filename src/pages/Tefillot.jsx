@@ -1,4 +1,7 @@
-const Tefillot = () => {
+import { Link } from "react-router-dom";
+import tefillot from "../data/tefillot.json";
+
+function Tefillot() {
   return (
     <>
       <header className='mb-6 text-center'>
@@ -7,11 +10,56 @@ const Tefillot = () => {
           Texts to read confidently before Beit Din
         </p>
       </header>
-      <main>
-        <p className='text-center italic text-accent'>Coming soon.</p>
+      <main className='space-y-10'>
+        {tefillot.map((prayer) => (
+          <section key={prayer.id}>
+            <h2 className='text-base font-semibold mb-3'>{prayer.name}</h2>
+            <div className='rounded-md border border-line bg-surface p-4 space-y-6'>
+              {prayer.sections.map((section) => (
+                <div key={section.label}>
+                  <p className='text-xs text-ink-soft mb-1'>{section.label}</p>
+                  <p
+                    lang='he'
+                    dir='rtl'
+                    className='font-hebrew text-xl leading-loose'
+                  >
+                    {section.hebrew}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className='mt-2 flex gap-4 text-xs text-ink-soft'>
+              {prayer.recordingUrl && (
+                <a
+                  href={prayer.recordingUrl}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='underline underline-offset-2 hover:text-ink'
+                >
+                  Listen
+                </a>
+              )}
+              {prayer.transliterationUrl && (
+                <a
+                  href={prayer.transliterationUrl}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='underline underline-offset-2 hover:text-ink'
+                >
+                  Transliteration
+                </a>
+              )}
+            </div>
+          </section>
+        ))}
       </main>
+      <p className='mt-8 text-center text-xs text-ink-soft'>
+        <Link to='/' className='underline underline-offset-2 hover:text-ink'>
+          Berakhot
+        </Link>
+      </p>
     </>
   );
-};
+}
 
 export default Tefillot;
