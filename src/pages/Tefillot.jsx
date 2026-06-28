@@ -13,15 +13,31 @@ function Tefillot() {
       <main className='space-y-10'>
         {tefillot.map((prayer) => (
           <section key={prayer.id}>
-            <h2 className='text-base font-semibold mb-3'>{prayer.name}</h2>
+            <h2 className='text-sm font-semibold uppercase tracking-wide text-ink mb-3'>
+              {prayer.name}
+            </h2>
             <div className='rounded-md border border-line bg-surface p-4 space-y-6'>
               {prayer.sections.map((section) => (
-                <div key={section.label}>
-                  <p className='text-xs text-ink-soft mb-1'>{section.label}</p>
+                <div
+                  key={section.label}
+                  className={
+                    section.variant === "liberal"
+                      ? "rounded border border-line-soft p-3 bg-base"
+                      : ""
+                  }
+                >
+                  <p className='text-xs font-medium uppercase tracking-wide text-ink-soft mb-1'>
+                    {section.label}
+                  </p>
+                  {section.note && (
+                    <p className='text-xs italic text-ink-soft mb-2'>
+                      {section.note}
+                    </p>
+                  )}
                   <p
                     lang='he'
                     dir='rtl'
-                    className='font-hebrew text-xl leading-loose'
+                    className='font-hebrew text-xl leading-loose whitespace-pre-line'
                   >
                     {section.hebrew}
                   </p>
