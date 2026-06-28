@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import BlessingLookup from "./components/BlessingLookup";
+import Tefillot from "./pages/Tefillot";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               </>
             }
           />
+          <Route path='/tefillot' element={<Tefillot />} />
         </Routes>
       </div>
     </div>

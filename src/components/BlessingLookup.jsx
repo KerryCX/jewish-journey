@@ -101,6 +101,14 @@ function BlessingLookup() {
           </>
         )}
       </div>
+      <p className='mt-8 text-center text-xs text-ink-soft'>
+        <a
+          href='/tefillot'
+          className='underline underline-offset-2 hover:text-ink'
+        >
+          Tefillot
+        </a>
+      </p>
     </div>
   );
 }
