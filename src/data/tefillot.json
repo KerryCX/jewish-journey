@@ -59,15 +59,15 @@
         "sentences": [
           {
             "hebrew": "לְמַעַן תִּזְכְּרוּ, וַעֲשִׂיתֶם אֶת-כָּל-מִצְוֹתָי, וִהְיִיתֶם קְדֹשִׁים לֵאלֹהֵיכֶם.",
-            "transliteration": "coming soon"
+            "transliteration": "l-man tizcaroo, vasadonaemitem et-col-mitsvotai, v-haeimteim kidusheem lalha'ceem"
           },
           {
             "hebrew": "אֲנִי יְהוָה אֱלֹהֵיכֶם, אֲשֶׁר הוֹצֵאתִי אֶתְכֶם מֵאֶרֶץ מִצְרַיִם, לִהְיוֹת לָכֶם לֵאלֹהִים.",
-            "transliteration": "coming soon"
+            "transliteration": "ani, adonai eleiceem, asher haotsstai etceem maretz mtsreem, lihaot laceem lalhaeem"
           },
           {
             "hebrew": "אֲנִי יְהוָה אֱלֹהֵיכֶם.",
-            "transliteration": "coming soon"
+            "transliteration": "ani adonai eleiceem"
           }
         ]
       }
@@ -93,23 +93,35 @@
       {
         "label": "Avot v'Imahot",
         "note": "Patriarchs and Matriarchs",
-        "hebrew": "בָּרוּךְ אַתָּה יְהוָה, אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ וְאִמּוֹתֵינוּ, אֱלֹהֵי אַבְרָהָם, אֱלֹהֵי יִצְחָק, וֵאלֹהֵי יַעֲקֹב, אֱלֹהֵי שָׂרָה, אֱלֹהֵי רִבְקָה, אֱלֹהֵי רָחֵל, וֵאלֹהֵי לֵאָה. הָאֵל הַגָּדוֹל, הַגִּבּוֹר, וְהַנּוֹרָא, אֵל עֶלְיוֹן, גּוֹמֵל חֲסָדִים טוֹבִים, וְקוֹנֵה הַכֹּל, וְזוֹכֵר חַסְדֵי אָבוֹת וְאִמָּהוֹת, וּמֵבִיא גְאֻלָּה לִבְנֵי בְנֵיהֶם, לְמַעַן שְׁמוֹ בְּאַהֲבָה. מֶלֶךְ עוֹזֵר, וּמוֹשִׁיעַ, וּמָגֵן. בָּרוּךְ אַתָּה יְהוָה, מָגֵן אַבְרָהָם וּפֹקֵד שָׂרָה.",
+        "hebrew": "בָּרוּךְ אַתָּה יְהוָה, אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ וְאִמּוֹתֵינוּ, אֱלֹהֵי אַבְרָהָם, אֱלֹהֵי יִצְחָק, וֵאלֹהֵי יַעֲקֹב, אֱלֹהֵי שָׂרָה, אֱלֹהֵי רִבְקָה, אֱלֹהֵי רָחֵל, וֵאלֹהֵי לֵאָה. הָאֵל הַגָּדוֹל, הַגִּבּוֹר, וְהַנּוֹרָא, אֵל עֶלְיוֹן, גּוֹמֵל חֲסָדִים טוֹבִים, וְקוֹנֵה הַכֹּל, וְזוֹכֵר חַסְדֵי אָבוֹת וְאִמָּהוֹת, וּמֵבִיא גְאֻלָּה לִבְנֵי בְנֵיהֶם, לְמַעַן שְׁמוֹ בְּאַהֲבָה. מֶלֶךְ עוֹזֵר, וּמוֹשִׁיעַ, וּמָגֵן. בָּרוּךְ אַתָּה יְהוָה, מָגֵן אַבְרָהָם וְעֶזְרַת שָׂרָה.",
         "sentences": [
           {
-            "hebrew": "בָּרוּךְ אַתָּה יְהוָה, אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ וְאִמּוֹתֵינוּ, אֱלֹהֵי אַבְרָהָם, אֱלֹהֵי יִצְחָק, וֵאלֹהֵי יַעֲקֹב, אֱלֹהֵי שָׂרָה, אֱלֹהֵי רִבְקָה, אֱלֹהֵי רָחֵל, וֵאלֹהֵי לֵאָה.",
-            "transliteration": "coming soon"
+            "hebrew": "בָּרוּךְ אַתָּה יְהוָה, אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ וְאִמּוֹתֵינוּ,",
+            "transliteration": "Barukh Atar Adonai, eloheinu v'elo-hai avotei-noo v'imotei-noo"
           },
           {
-            "hebrew": "הָאֵל הַגָּדוֹל, הַגִּבּוֹר, וְהַנּוֹרָא, אֵל עֶלְיוֹן, גּוֹמֵל חֲסָדִים טוֹבִים, וְקוֹנֵה הַכֹּל, וְזוֹכֵר חַסְדֵי אָבוֹת וְאִמָּהוֹת, וּמֵבִיא גְאֻלָּה לִבְנֵי בְנֵיהֶם, לְמַעַן שְׁמוֹ בְּאַהֲבָה.",
-            "transliteration": "coming soon"
+            "hebrew": "אֱלֹהֵי אַבְרָהָם, אֱלֹהֵי יִצְחָק, וֵאלֹהֵי יַעֲקֹב, אֱלֹהֵי שָׂרָה, אֱלֹהֵי רִבְקָה, אֱלֹהֵי רָחֵל, וֵאלֹהֵי לֵאָה",
+            "transliteration": "elohei Avraham, elohei Yiza-kh-k, elohei Yakov, elohei Sarah, elohei Ra-kh-el, ehohei Leah"
+          },
+          {
+            "hebrew": "הָאֵל הַגָּדוֹל, הַגִּבּוֹר, וְהַנּוֹרָא, אֵל עֶלְיוֹן,",
+            "transliteration": "ha-el ha-gadol, ha-gee-bor, v'ha-no-rah, el el-yon"
+          },
+          {
+            "hebrew": ",גּוֹמֵל חֲסָדִים טוֹבִים, וְקוֹנֵה הַכֹּל, וְזוֹכֵר חַסְדֵי אָבוֹת וְאִמָּהוֹת,",
+            "transliteration": "gomeil kha-sad-eem toveem, v-conei ha-col, v'z-o-kheir khasdai avot v'ee-mah-ot"
+          },
+          {
+            "hebrew": ", וּמֵבִיא גְאֻלָּה לִבְנֵי בְנֵיהֶם, לְמַעַן שְׁמוֹ בְּאַהֲבָה.",
+            "transliteration": "oomeiviy g'eilah l'vnai v'neyhem, l'ma-an shuhmoh b'a-havah"
           },
           {
             "hebrew": "מֶלֶךְ עוֹזֵר, וּמוֹשִׁיעַ, וּמָגֵן.",
-            "transliteration": "coming soon"
+            "transliteration": "melekh o-ts-eir, oo-moshiyah, oomagen"
           },
           {
-            "hebrew": "בָּרוּךְ אַתָּה יְהוָה, מָגֵן אַבְרָהָם וּפֹקֵד שָׂרָה.",
-            "transliteration": "coming soon"
+            "hebrew": "בָּרוּךְ אַתָּה יְהוָה, מָגֵן אַבְרָהָם וְעֶזְרַת שָׂרָה.",
+            "transliteration": "Barukh atar adonai, magen avraham v’ezrat Sar-ah"
           }
         ]
       },
@@ -119,23 +131,35 @@
         "sentences": [
           {
             "hebrew": "אַתָּה גִּבּוֹר לְעוֹלָם אֲדֹנָי, מְחַיֵּה מֵתִים אַתָּה, רַב לְהוֹשִׁיעַ.",
-            "transliteration": "coming soon"
+            "transliteration": "Atah gibor layolam adonai, m'khayeh m'tim atah, rav l'hoshee-yah"
           },
           {
-            "hebrew": "מְכַלְכֵּל חַיִּים בְּחֶסֶד, מְחַיֵּה מֵתִים בְּרַחֲמִים רַבִּים, סוֹמֵךְ נוֹפְלִים, וְרוֹפֵא חוֹלִים, וּמַתִּיר אֲסוּרִים, וּמְקַיֵּם אֱמוּנָתוֹ לִישֵׁנֵי עָפָר.",
-            "transliteration": "coming soon"
+            "hebrew": "מַשִּׁיב הָרוּחַ וּמוֹרִיד הַגֶּשֶׁם",
+            "transliteration": "ma-sheev har-oo-akh umoreed ha-geshem"
+          },
+          {
+            "hebrew": "ּׁמַזְרִיחַ הַשֶּׁמֶשׁ וּמוֹרִיד הַטָּל",
+            "transliteration": "maz-ree-akh hashemesh umoreed hatal"
+          },
+          {
+            "hebrew": "מְכַלְכֵּל חַיִּים בְּחֶסֶד, מְחַיֵּה מֵתִים בְּרַחֲמִים רַבִּים.",
+            "transliteration": "m'khal-cel khe-yeem b'khesed, m'khei-yei maiteem berakhamim rabeem"
+          },
+          {
+            "hebrew": "סוֹמֵךְ נוֹפְלִים, וְרוֹפֵא חוֹלִים, וּמַתִּיר אֲסוּרִים, וּמְקַיֵּם אֱמוּנָתוֹ לִישֵׁנֵי עָפָר.",
+            "transliteration": "somekh nofleem, v'rofei kholeem, umateer asureem, umkayeem emunato l'shinei afar"
           },
           {
             "hebrew": "מִי כָמוֹךָ בַּעַל גְּבוּרוֹת, וּמִי דּוֹמֶה לָּךְ, מֶלֶךְ מֵמִית וּמְחַיֶּה וּמַצְמִיחַ יְשׁוּעָה.",
-            "transliteration": "coming soon"
+            "transliteration": "mee camo-kha bayal g'vurot, umee domeh lakh, melekh memeet umkhaeh umatsmeeakh yishuah"
           },
           {
             "hebrew": "וְנֶאֱמָן אַתָּה לְהַחֲיוֹת מֵתִים.",
-            "transliteration": "coming soon"
+            "transliteration": "v'ne-eiman atah l'ha-khey-ot meteem"
           },
           {
             "hebrew": "בָּרוּךְ אַתָּה יְהוָה, מְחַיֵּה הַמֵּתִים.",
-            "transliteration": "coming soon"
+            "transliteration": "Barukh atah adonai, m'hayeh hameteem"
           }
         ]
       },
@@ -144,28 +168,40 @@
         "hebrew": "נְקַדֵּשׁ אֶת-שִׁמְךָ בָּעוֹלָם, כְּשֵׁם שֶׁמַּקְדִּישִׁים אוֹתוֹ בִּשְׁמֵי מָרוֹם, כַּכָּתוּב עַל-יַד נְבִיאֶךָ: וְקָרָא זֶה אֶל-זֶה וְאָמַר:\nקָדוֹשׁ, קָדוֹשׁ, קָדוֹשׁ, יְהוָה צְבָאוֹת, מְלֹא כָל-הָאָרֶץ כְּבוֹדוֹ.\nבָּרוּךְ כְּבוֹד יְהוָה מִמְּקוֹמוֹ.\nיִמְלֹךְ יְהוָה לְעוֹלָם, אֱלֹהַיִךְ צִיּוֹן, לְדֹר וָדֹר. הַלְלוּיָהּ. בָּרוּךְ אַתָּה יְהוָה, הָאֵל הַקָּדוֹשׁ.",
         "sentences": [
           {
-            "hebrew": "נְקַדֵּשׁ אֶת-שִׁמְךָ בָּעוֹלָם, כְּשֵׁם שֶׁמַּקְדִּישִׁים אוֹתוֹ בִּשְׁמֵי מָרוֹם, כַּכָּתוּב עַל-יַד נְבִיאֶךָ: וְקָרָא זֶה אֶל-זֶה וְאָמַר:",
-            "transliteration": "coming soon"
+            "hebrew": "נְקַדֵּשׁ אֶת-שִׁמְךָ בָּעוֹלָם:",
+            "transliteration": "n'kadeysh et-shimakh ba'olam"
+          },
+          {
+            "hebrew": "כְּשֵׁם שֶׁמַּקְדִּישִׁים אוֹתוֹ בִּשְׁמֵי מָרוֹם",
+            "transliteration": "c'shem shemak-diy-sheem oto bishmei marom"
+          },
+          {
+            "hebrew": "כַּכָּתוּב עַל-יַד נְבִיאֶךָ: וְקָרָא זֶה אֶל-זֶה וְאָמַר",
+            "transliteration": "cacatuv al-yad n'vee-ei-akh: v'kara zeh el-zeh v'amar"
           },
           {
             "hebrew": "קָדוֹשׁ, קָדוֹשׁ, קָדוֹשׁ, יְהוָה צְבָאוֹת, מְלֹא כָל-הָאָרֶץ כְּבוֹדוֹ.",
-            "transliteration": "coming soon"
+            "transliteration": "kadosh, kadosh, kadosh, adonai ts'va-ot, m'lo khol-ha-arets kh'vo-doh"
+          },
+          {
+            "hebrew": "כְּבוֹדוֹ מָלֵא עוֹלָם",
+            "transliteration": "k'vodo malei olam"
           },
           {
             "hebrew": "בָּרוּךְ כְּבוֹד יְהוָה מִמְּקוֹמוֹ.",
-            "transliteration": "coming soon"
+            "transliteration": "Barukh c'vod adonai meem-ko-moh"
           },
           {
             "hebrew": "יִמְלֹךְ יְהוָה לְעוֹלָם, אֱלֹהַיִךְ צִיּוֹן, לְדֹר וָדֹר.",
-            "transliteration": "coming soon"
+            "transliteration": "yimlokh adonai lai-olam, eloehikh tsiyon, l'dor vador"
           },
           {
             "hebrew": "הַלְלוּיָהּ.",
-            "transliteration": "coming soon"
+            "transliteration": "Halleluyah!"
           },
           {
             "hebrew": "בָּרוּךְ אַתָּה יְהוָה, הָאֵל הַקָּדוֹשׁ.",
-            "transliteration": "coming soon"
+            "transliteration": "Barukh atah adonai, ha-el hakadosh"
           }
         ]
       },
@@ -209,19 +245,15 @@
       },
       {
         "label": "Avodah",
-        "hebrew": "רְצֵה יְהוָה אֱלֹהֵינוּ בְּעַמְּךָ יִשְׂרָאֵל וּבִתְפִלָּתָם, וְהָשֵׁב אֶת-הָעֲבוֹדָה לִדְבִיר בֵּיתֶךָ, וְאִשֵּׁי יִשְׂרָאֵל וּתְפִלָּתָם בְּאַהֲבָה תְקַבֵּל בְּרָצוֹן, וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּךָ. וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן בְּרַחֲמִים. בָּרוּךְ אַתָּה יְהוָה, הַמַּחֲזִיר שְׁכִינָתוֹ לְצִיּוֹן.",
+        "hebrew": "רְצֵה, יְיָ אֱלֹהֵינוּ, בְּעַמְּךָ יִשְׂרָאֵל, וּתְפִלָּתָם בְּאַהֲבָה תְקַבֵּל, וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּךָ. בָּרוּךְ אַתָּה יְיָ, שֶׁאוֹתְךָ לְבַדְּךָ בְּיִרְאָה נַעֲבוֹד.",
         "sentences": [
           {
-            "hebrew": "רְצֵה יְהוָה אֱלֹהֵינוּ בְּעַמְּךָ יִשְׂרָאֵל וּבִתְפִלָּתָם, וְהָשֵׁב אֶת-הָעֲבוֹדָה לִדְבִיר בֵּיתֶךָ, וְאִשֵּׁי יִשְׂרָאֵל וּתְפִלָּתָם בְּאַהֲבָה תְקַבֵּל בְּרָצוֹן, וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּךָ.",
-            "transliteration": "coming soon"
+            "hebrew": "רְצֵה, יְיָ אֱלֹהֵינוּ, בְּעַמְּךָ יִשְׂרָאֵל, וּתְפִלָּתָם בְּאַהֲבָה תְקַבֵּל, וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּךָ.",
+            "transliteration": "r'ts-hai adonai eloheinu bi-am-kha yisrael, utifilatam, b'ahavah tekabel, ut-hee l'ratson tameed avodat yisrael amekha"
           },
           {
-            "hebrew": "וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן בְּרַחֲמִים.",
-            "transliteration": "coming soon"
-          },
-          {
-            "hebrew": "בָּרוּךְ אַתָּה יְהוָה, הַמַּחֲזִיר שְׁכִינָתוֹ לְצִיּוֹן.",
-            "transliteration": "coming soon"
+            "hebrew": "בָּרוּךְ אַתָּה יְיָ, שֶׁאוֹתְךָ לְבַדְּךָ בְּיִרְאָה נַעֲבוֹד.",
+            "transliteration": "Barukh atah adonai, she-ot-kha l'vad-kha b'yirah na-avod"
           }
         ]
       },
@@ -340,7 +372,7 @@
           },
           {
             "hebrew": "שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ, וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל, וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים.",
-            "transliteration": "shehu notei shamayim vay-osed eretz, oo-moshav yikaroh bashama-yim meemayal, oosh-kheenat oots-oh begoovhay meer-oh-meem"
+            "transliteration": "shehu notei shamayim vay-osed eretz, oo-moshav yikaroh bashama-yim meemayal, oosh-kheenat ooz-oh begoovhay meer-oh-meem"
           },
           {
             "hebrew": "הוּא אֱלֹהֵינוּ, אֵין עוֹד.",
