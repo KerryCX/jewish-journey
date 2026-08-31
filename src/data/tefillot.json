@@ -337,19 +337,27 @@
         "sentences": [
           {
             "hebrew": "שִׂים שָׁלוֹם, טוֹבָה וּבְרָכָה, חֵן וָחֶסֶד וְרַחֲמִים, עָלֵינוּ וְעַל-כָּל-יִשְׂרָאֵל עַמֶּךָ.",
-            "transliteration": "coming soon"
+            "transliteration": "sim shalom, tovah uvrakha, khen vakhesed v'rakhamim, aleinu v'al-col-yisrael amekha"
           },
           {
-            "hebrew": "בָּרְכֵנוּ אָבִינוּ, כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ, כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָנוּ יְהוָה אֱלֹהֵינוּ, תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד, וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם.",
-            "transliteration": "coming soon"
+            "hebrew": "בָּרְכֵנוּ אָבִינוּ, כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ,",
+            "transliteration": "barkhenu avinu, culanu c'ekhad b'or paneikha"
+          },
+          {
+            "hebrew": "כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָנוּ יְהוָה אֱלֹהֵינוּ, תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד,",
+            "transliteration": "ci b'or paneikha natata lanu adonai eloheinu, torat khayim v'ahavat khesed"
+          },
+          {
+            "hebrew": "וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם.",
+            "transliteration": "utzdaka uvrakha v'rakhamim v'khayim v'shalom"
           },
           {
             "hebrew": "וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת-עַמְּךָ יִשְׂרָאֵל, בְּכָל-עֵת וּבְכָל-שָׁעָה בִּשְׁלוֹמֶךָ.",
-            "transliteration": "coming soon"
+            "transliteration": "v'tov b'einekha l'varekh et-amkha yisrael, b'khol-et uvkhol-sha-ah bish'lomekha"
           },
           {
             "hebrew": "בָּרוּךְ אַתָּה יְהוָה, הַמְבָרֵךְ אֶת-עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם.",
-            "transliteration": "coming soon"
+            "transliteration": "barukh atah adonai, hamvarekh et-amo yisrael bashalom"
           }
         ]
       }
