@@ -287,31 +287,47 @@
         "sentences": [
           {
             "hebrew": "מוֹדִים אֲנַחְנוּ לָךְ, שָׁאַתָּה הוּא יְהוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ וְאִמּוֹתֵינוּ לְעוֹלָם וָעֶד.",
-            "transliteration": "coming soon"
+            "transliteration": "Modim anakhnu lakh, sha'atah hu adonai eloheinu ve'elohei avoteinu v'imoteinu la'olam va'ed"
           },
           {
             "hebrew": "צוּר חַיֵּינוּ, מָגֵן יִשְׁעֵנוּ, אַתָּה הוּא לְדוֹר וָדוֹר.",
-            "transliteration": "coming soon"
+            "transliteration": "tsur khayeinu, magen yish'einu, atah hu l'dor vador"
           },
           {
-            "hebrew": "נוֹדֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶךָ, עַל-חַיֵּינוּ הַמְּסוּרִים בְּיָדֶךָ, וְעַל-נִשְׁמוֹתֵינוּ הַפְּקוּדוֹת לָךְ, וְעַל-נִסֶּיךָ שֶׁבְּכָל-יוֹם עִמָּנוּ, וְעַל-נִפְלְאוֹתֶיךָ וְטוֹבוֹתֶיךָ שֶׁבְּכָל-עֵת, עֶרֶב וָבֹקֶר וְצָהֳרָיִם.",
-            "transliteration": "coming soon"
+            "hebrew": "נוֹדֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶךָ, עַל-חַיֵּינוּ הַמְּסוּרִים בְּיָדֶךָ,",
+            "transliteration": "nodeh l'kha u'nesaper t'hilatekha, al-khayeinu ham'surim b'yadekha"
           },
           {
-            "hebrew": "הַטּוֹב, כִּי לֹא-כָלוּ רַחֲמֶיךָ, וְהַמְרַחֵם, כִּי לֹא-תַמּוּ חֲסָדֶיךָ, כִּי מֵעוֹלָם קִוִּינוּ לָךְ.",
-            "transliteration": "coming soon"
+            "hebrew": "וְעַל-נִשְׁמוֹתֵינוּ הַפְּקוּדוֹת לָךְ, וְעַל-נִסֶּיךָ שֶׁבְּכָל-יוֹם עִמָּנוּ,",
+            "transliteration": "v'al-nish'moteinu hap'kudot lakh, v'al-nisekha shebkhol-yom imanu"
+          },
+          {
+            "hebrew": "וְעַל-נִפְלְאוֹתֶיךָ וְטוֹבוֹתֶיךָ שֶׁבְּכָל-עֵת, עֶרֶב וָבֹקֶר וְצָהֳרָיִם.",
+            "transliteration": "v'al-niflotekha v'tovotekha shebkhol-et, erev vavoker v'tzohorayim"
+          },
+          {
+            "hebrew": "הַטּוֹב, כִּי לֹא-כָלוּ רַחֲמֶיךָ, וְהַמְרַחֵם, כִּי לֹא-תַמּוּ חֲסָדֶיךָ,",
+            "transliteration": "hatov, ci lo-khalu rakhamekha, v'hamrakhem, ci lo-tamu khasadekha"
+          },
+          {
+            "hebrew": "כִּי מֵעוֹלָם קִוִּינוּ לָךְ.",
+            "transliteration": "ci me-olam kivinu lakh"
           },
           {
             "hebrew": "וְעַל-כֻּלָּם יִתְבָּרַךְ וְיִתְרוֹמַם שִׁמְךָ מַלְכֵּנוּ תָּמִיד לְעוֹלָם וָעֶד.",
-            "transliteration": "coming soon"
+            "transliteration": "v'al-culam yitbarakh v'yitromam shimkha malcenu tamid l'olam va'ed"
           },
           {
-            "hebrew": "וְכֹל הַחַיִּים יוֹדוּךָ סֶּלָה, וִיהַלְלוּ אֶת-שִׁמְךָ בֶּאֱמֶת, הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה.",
-            "transliteration": "coming soon"
+            "hebrew": "וְכֹל הַחַיִּים יוֹדוּךָ סֶּלָה, וִיהַלְלוּ אֶת-שִׁמְךָ בֶּאֱמֶת,",
+            "transliteration": "v'khol hakhayim yodukha selah, vihal'lu et-shimkha be'emet"
+          },
+          {
+            "hebrew": "הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה.",
+            "transliteration": "ha-el y'shu'atenu v'ezratenu selah"
           },
           {
             "hebrew": "בָּרוּךְ אַתָּה יְהוָה, הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת.",
-            "transliteration": "coming soon"
+            "transliteration": "barukh atah adonai, hatov shimkha u'l'kha na-eh l'hodot"
           }
         ]
       },
