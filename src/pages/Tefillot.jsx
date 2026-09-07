@@ -134,12 +134,6 @@ function Tefillot() {
           )}
         </div>
       </main>
-
-      <p className='mt-8 text-center text-xs text-ink-soft'>
-        <Link to='/' className='underline underline-offset-2 hover:text-ink'>
-          Berakhot
-        </Link>
-      </p>
     </>
   );
 }
