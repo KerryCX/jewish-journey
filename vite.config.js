@@ -17,6 +17,9 @@ export default defineConfig({
         "favicon-32x32.png",
         "apple-touch-icon.png",
       ],
+      workbox: {
+        navigateFallbackDenylist: [/\.(pdf|png|jpg|jpeg)$/],
+      },
     }),
   ],
 });
