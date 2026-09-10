@@ -30,15 +30,15 @@ const navItems = [
 
 export default function Nav() {
   return (
-    <nav className='mb-6 border-b border-line bg-surface'>
-      <ul className='flex justify-center gap-6 px-4 py-3'>
+    <nav className='w-full border-b border-line bg-surface'>
+      <ul className='flex w-full justify-center gap-6 px-4 py-3'>
         {navItems.map(({ to, hebrew, transliteration, english }) => (
           <li key={to} className='group relative'>
             <NavLink
               to={to}
               end={to === "/"}
               className={({ isActive }) =>
-                `flex flex-col items-center border-b-2 pb-1 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
+                `flex flex-col items-center gap-0 border-b-2 pb-1 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 sm:flex-row sm:items-baseline sm:gap-1.5 ${
                   isActive ? "border-accent" : "border-transparent"
                 }`
               }
@@ -52,17 +52,20 @@ export default function Nav() {
                   >
                     {hebrew}
                   </span>
-                  <span className='sr-only'>
-                    {" "}
-                    ({transliteration}, {english})
+                  <span aria-hidden='true' className='hidden text-ink-soft sm:inline'>
+                    -
                   </span>
                   <span
                     aria-hidden='true'
-                    className={`mt-0.5 text-xs ${
+                    className={`mt-0.5 text-xs sm:mt-0 ${
                       isActive ? "text-accent" : "text-ink-soft"
                     }`}
                   >
                     {transliteration}
+                  </span>
+                  <span className='sr-only'>
+                    {" "}
+                    ({transliteration}, {english})
                   </span>
                 </>
               )}

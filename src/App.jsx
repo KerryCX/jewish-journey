@@ -8,8 +8,8 @@ import Nav from "./components/Nav";
 function App() {
   return (
     <div className='min-h-screen bg-base text-ink'>
+      <Nav />
       <div className='mx-auto max-w-md px-5 py-10'>
-        <Nav />
         <Routes>
           <Route
             path='/'
@@ -28,10 +28,16 @@ function App() {
             }
           />
           <Route path='/tefillot' element={<Tefillot />} />
-          <Route path='/shorashim' element={<Shorashim />} />
           <Route path='/mekorot' element={<Mekorot />} />
         </Routes>
       </div>
+
+      {/* Shorashim manages its own responsive width (max-w-6xl normally,
+          full viewport width in desktop Talmud mode), so it renders
+          outside the max-w-md wrapper rather than being squeezed into it. */}
+      <Routes>
+        <Route path='/shorashim' element={<Shorashim />} />
+      </Routes>
     </div>
   );
 }
