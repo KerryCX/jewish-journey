@@ -1,0 +1,475 @@
+// src/pages/Shorashim.jsx
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+/**
+ * Shorashim (Hebrew roots) overview page.
+ * Groups common three-letter roots by core meaning, each linking to its
+ * own page at /shorashim/:slug (one page per root, showing every form
+ * of that root found across the siddur, cross-referenced back to Tefillot).
+ *
+ * Transliteration convention: kh = soft kaf, c = hard kaf/kaf-dagesh,
+ * k = reserved for kuf.
+ *
+ * Two desktop-only toggles:
+ *  - Rainbow mode: colours the bubbles vs a plain neutral style.
+ *  - Talmud mode: clicking a bubble opens a commentary-style card in the
+ *    left/right margin (alternating), instead of navigating to the root's
+ *    own page — echoing the way Rashi/Tosafot flank a page of Gemara.
+ */
+
+const categories = [
+  {
+    title: "Movement & direction",
+    emoji: "🚶",
+    roots: [
+      {
+        slug: "hlk",
+        hebrew: "ה.ל.ך",
+        translit: "halakh",
+        meaning: "to walk, go",
+        example: { hebrew: "לֶךְ־לְךָ", translit: "lech-lecha", gloss: "go forth" },
+      },
+      {
+        slug: "bwa",
+        hebrew: "ב.ו.א",
+        translit: "bo",
+        meaning: "to come, enter",
+        example: { hebrew: "וַיָּבֹא", translit: "vayavo", gloss: "and he came" },
+      },
+      {
+        slug: "ytza",
+        hebrew: "י.צ.א",
+        translit: "yatza",
+        meaning: "to go out, exit",
+        example: { hebrew: "יְצִיאַת מִצְרַיִם", translit: "yetziat mitzrayim", gloss: "the Exodus from Egypt" },
+      },
+      {
+        slug: "alh",
+        hebrew: "ע.ל.ה",
+        translit: "alah",
+        meaning: "to go up, ascend",
+        example: { hebrew: "עֲלִיָּה", translit: "aliyah", gloss: "going up to the Torah, or to the Land" },
+      },
+      {
+        slug: "yrd",
+        hebrew: "י.ר.ד",
+        translit: "yarad",
+        meaning: "to go down, descend",
+        example: null,
+      },
+      {
+        slug: "shwv",
+        hebrew: "ש.ו.ב",
+        translit: "shuv",
+        meaning: "to return, repent",
+        example: { hebrew: "תְּשׁוּבָה", translit: "teshuvah", gloss: "return, repentance" },
+      },
+    ],
+  },
+  {
+    title: "Communication & mind",
+    emoji: "🗣️",
+    roots: [
+      {
+        slug: "amr",
+        hebrew: "א.מ.ר",
+        translit: "amar",
+        meaning: "to say, speak",
+        example: { hebrew: "וַיֹּאמֶר", translit: "vayomer", gloss: "and he said" },
+      },
+      {
+        slug: "dvr",
+        hebrew: "ד.ב.ר",
+        translit: "davar",
+        meaning: "to speak, talk",
+        example: { hebrew: "דְּבַר ה׳", translit: "d'var Adonai", gloss: "word of God" },
+      },
+      {
+        slug: "kra",
+        hebrew: "ק.ר.א",
+        translit: "kara",
+        meaning: "to call, read, summon",
+        example: { hebrew: "וַיִּקְרָא", translit: "vayikra", gloss: "and He called" },
+      },
+      {
+        slug: "shma",
+        hebrew: "ש.מ.ע",
+        translit: "shama",
+        meaning: "to hear, listen, obey",
+        example: { hebrew: "שְׁמַע יִשְׂרָאֵל", translit: "Shema Yisrael", gloss: "Hear, O Israel" },
+      },
+      {
+        slug: "yda",
+        hebrew: "י.ד.ע",
+        translit: "yada",
+        meaning: "to know",
+        example: null,
+      },
+      {
+        slug: "rah",
+        hebrew: "ר.א.ה",
+        translit: "ra'ah",
+        meaning: "to see",
+        example: { hebrew: "וַיַּרְא", translit: "vayar", gloss: "and he saw" },
+      },
+    ],
+  },
+  {
+    title: "Action & existence",
+    emoji: "🛠️",
+    roots: [
+      {
+        slug: "ash",
+        hebrew: "ע.ש.ה",
+        translit: "asah",
+        meaning: "to do, make",
+        example: { hebrew: "מַעֲשֶׂה", translit: "ma'aseh", gloss: "deed, action" },
+      },
+      {
+        slug: "hyh",
+        hebrew: "ה.י.ה",
+        translit: "hayah",
+        meaning: "to be, exist",
+        example: null,
+      },
+      {
+        slug: "ntn",
+        hebrew: "נ.ת.ן",
+        translit: "natan",
+        meaning: "to give",
+        example: { hebrew: "מַתָּנָה", translit: "matanah", gloss: "gift" },
+      },
+      {
+        slug: "lkch",
+        hebrew: "ל.ק.ח",
+        translit: "lakach",
+        meaning: "to take, receive",
+        example: null,
+      },
+      {
+        slug: "shlch",
+        hebrew: "ש.ל.ח",
+        translit: "shalach",
+        meaning: "to send",
+        example: { hebrew: "שָׁלִיחַ", translit: "shaliach", gloss: "emissary, messenger" },
+      },
+    ],
+  },
+  {
+    title: "God, sanctuary & society",
+    emoji: "👑",
+    roots: [
+      {
+        slug: "kdsh",
+        hebrew: "ק.ד.ש",
+        translit: "kadash",
+        meaning: "to be holy, sanctify",
+        example: { hebrew: "מִקְדָּשׁ", translit: "mikdash", gloss: "sanctuary" },
+      },
+      {
+        slug: "tzvh",
+        hebrew: "צ.ו.ה",
+        translit: "tzivah",
+        meaning: "to command",
+        example: { hebrew: "מִצְוָה", translit: "mitzvah", gloss: "commandment" },
+      },
+      {
+        slug: "brkh",
+        hebrew: "ב.ר.ך",
+        translit: "barakh",
+        meaning: "to bless",
+        example: { hebrew: "בְּרָכָה", translit: "berakhah", gloss: "blessing" },
+      },
+      {
+        slug: "mlkh",
+        hebrew: "מ.ל.ך",
+        translit: "malakh",
+        meaning: "to rule, reign",
+        example: { hebrew: "מַלְכוּת", translit: "malkhut", gloss: "kingdom" },
+      },
+      {
+        slug: "yshv",
+        hebrew: "י.ש.ב",
+        translit: "yashav",
+        meaning: "to sit, dwell, settle",
+        example: { hebrew: "יִשּׁוּב", translit: "yishuv", gloss: "settlement" },
+      },
+    ],
+  },
+];
+
+// Flattened once so bubbles and margin cards can share the same colour per
+// root, regardless of which mode is drawing them.
+const allRoots = categories.flatMap((c) => c.roots);
+
+const rainbow = [
+  "bg-red-100 border-red-300 text-red-900",
+  "bg-orange-100 border-orange-300 text-orange-900",
+  "bg-amber-100 border-amber-300 text-amber-900",
+  "bg-green-100 border-green-300 text-green-900",
+  "bg-teal-100 border-teal-300 text-teal-900",
+  "bg-blue-100 border-blue-300 text-blue-900",
+  "bg-violet-100 border-violet-300 text-violet-900",
+];
+const neutralBubble = "bg-surface border-line text-ink";
+
+const colorForSlug = {};
+allRoots.forEach((r, i) => {
+  colorForSlug[r.slug] = rainbow[i % rainbow.length];
+});
+
+function RootBubble({ root, colorClasses, talmudOn, isOpen, onToggle }) {
+  const bubbleClasses = `flex flex-col items-center gap-1 rounded-2xl border px-4 py-3 text-center no-underline transition hover:-translate-y-0.5 hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-1 ${colorClasses} ${
+    isOpen ? "ring-2 ring-ink" : ""
+  }`;
+
+  const inner = (
+    <>
+      <span className='text-lg' dir='rtl' lang='he'>
+        {root.hebrew}
+      </span>
+      <span className='text-xs font-medium'>{root.translit}</span>
+      <span className='text-xs opacity-80'>{root.meaning}</span>
+    </>
+  );
+
+  if (talmudOn) {
+    return (
+      <li className='list-none'>
+        <button
+          type='button'
+          onClick={() => onToggle(root.slug)}
+          aria-pressed={isOpen}
+          className={bubbleClasses}
+        >
+          {inner}
+          <span className='sr-only'>
+            {" "}
+            — {isOpen ? "hide" : "show"} this root's detail in the margin
+          </span>
+        </button>
+      </li>
+    );
+  }
+
+  return (
+    <li className='list-none'>
+      <Link
+        to={`/shorashim/${root.slug}`}
+        title={
+          root.example
+            ? `e.g. ${root.example.translit} — "${root.example.gloss}"`
+            : undefined
+        }
+        className={bubbleClasses}
+      >
+        {inner}
+        <span className='sr-only'> — view every form of this root in the siddur</span>
+      </Link>
+    </li>
+  );
+}
+
+function MarginCard({ root, colorClasses, onClose }) {
+  return (
+    <div className={`rounded-lg border p-3 text-left shadow-sm ${colorClasses}`}>
+      <div className='flex items-start justify-between gap-2'>
+        <span className='text-base' dir='rtl' lang='he'>
+          {root.hebrew}
+        </span>
+        <button
+          type='button'
+          onClick={onClose}
+          aria-label={`Close ${root.translit}`}
+          className='text-xs opacity-60 hover:opacity-100'
+        >
+          ✕
+        </button>
+      </div>
+      <p className='mt-1 text-xs font-medium'>
+        {root.translit} — {root.meaning}
+      </p>
+      {root.example && (
+        <p className='mt-2 text-xs opacity-80'>
+          <span dir='rtl' lang='he'>
+            {root.example.hebrew}
+          </span>{" "}
+          — {root.example.translit}, "{root.example.gloss}"
+        </p>
+      )}
+      <Link
+        to={`/shorashim/${root.slug}`}
+        className='mt-2 inline-block text-xs underline underline-offset-2'
+      >
+        View full root page →
+      </Link>
+    </div>
+  );
+}
+
+export default function Shorashim() {
+  // Rainbow mode is on by default everywhere. Its toggle is desktop-only
+  // (see `hidden sm:inline-flex` below), so on mobile this stays true and
+  // the control simply never renders.
+  const [rainbowOn, setRainbowOn] = useState(true);
+
+  // Talmud mode is off by default and, like rainbow mode, only reachable
+  // from desktop widths — the margin layout needs the extra horizontal
+  // room a phone doesn't have.
+  const [talmudOn, setTalmudOn] = useState(false);
+  const [openSlugs, setOpenSlugs] = useState([]);
+
+  const toggleRoot = (slug) => {
+    setOpenSlugs((prev) =>
+      prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]
+    );
+  };
+
+  // Alternate newly-opened roots left/right, the way commentary blocks
+  // alternate sides around a page of Gemara.
+  const leftSlugs = openSlugs.filter((_, i) => i % 2 === 0);
+  const rightSlugs = openSlugs.filter((_, i) => i % 2 === 1);
+
+  const rootBySlug = Object.fromEntries(allRoots.map((r) => [r.slug, r]));
+
+  const renderMargin = (slugs) => (
+    <aside className='hidden flex-col gap-3 sm:sticky sm:top-4 sm:flex'>
+      {slugs.map((slug) => (
+        <MarginCard
+          key={slug}
+          root={rootBySlug[slug]}
+          colorClasses={rainbowOn ? colorForSlug[slug] : neutralBubble}
+          onClose={() => toggleRoot(slug)}
+        />
+      ))}
+    </aside>
+  );
+
+  const centerContent = (
+    <div className='text-left'>
+      <div className='rounded-lg border border-line bg-surface p-4'>
+        <p className='text-sm leading-relaxed text-ink-soft'>
+          Most Hebrew words build outward from a three-letter root. The
+          roots below appear hundreds, sometimes thousands, of times across
+          the Tanach and the siddur, so mastering even a small selection
+          means you'll start recognizing them everywhere.{" "}
+          {talmudOn
+            ? "Tap a root to open its detail alongside the page."
+            : "Tap a root to see every form of it that appears in the prayers, with links back to where each one is used."}
+        </p>
+      </div>
+
+      <div className='mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2'>
+        {categories.map((category) => (
+          <section
+            key={category.title}
+            className='rounded-lg border border-line bg-surface p-4'
+          >
+            <h2 className='mb-3 flex items-center gap-2 text-lg font-medium text-ink'>
+              <span aria-hidden='true'>{category.emoji}</span>
+              {category.title}
+            </h2>
+            <ul className='flex flex-wrap gap-3'>
+              {category.roots.map((root) => (
+                <RootBubble
+                  key={root.slug}
+                  root={root}
+                  colorClasses={rainbowOn ? colorForSlug[root.slug] : neutralBubble}
+                  talmudOn={talmudOn}
+                  isOpen={openSlugs.includes(root.slug)}
+                  onToggle={toggleRoot}
+                />
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+
+      <section className='mt-4 rounded-lg border border-line bg-surface p-4'>
+        <h2 className='mb-2 flex items-center gap-2 text-lg font-medium text-ink'>
+          <span aria-hidden='true'>💡</span>
+          Spotting the root in a word
+        </h2>
+        <p className='mb-3 text-sm leading-relaxed text-ink-soft'>
+          A word is rarely just its root. Prefixes and suffixes get added
+          for tense, pronoun, and number, so a word can look longer and less
+          familiar than the three-letter root underneath. To find it,
+          mentally strip away:
+        </p>
+        <ol className='list-decimal space-y-2 pl-5 text-sm leading-relaxed text-ink-soft'>
+          <li>
+            <span className='text-ink'>Pronoun prefixes:</span>{" "}
+            <span dir='rtl' lang='he'>י</span> (he),{" "}
+            <span dir='rtl' lang='he'>ת</span> (you/she),{" "}
+            <span dir='rtl' lang='he'>א</span> (I),{" "}
+            <span dir='rtl' lang='he'>נ</span> (we)
+          </li>
+          <li>
+            <span className='text-ink'>Grammatical prefixes:</span>{" "}
+            <span dir='rtl' lang='he'>ה</span> (the, or causative),{" "}
+            <span dir='rtl' lang='he'>ו</span> (and),{" "}
+            <span dir='rtl' lang='he'>ב</span> (in),{" "}
+            <span dir='rtl' lang='he'>כ</span> (like),{" "}
+            <span dir='rtl' lang='he'>ל</span> (to),{" "}
+            <span dir='rtl' lang='he'>מ</span> (from)
+          </li>
+          <li>
+            <span className='text-ink'>Suffixes:</span>{" "}
+            <span dir='rtl' lang='he'>וֹת</span> /{" "}
+            <span dir='rtl' lang='he'>ִים</span> (plurals),{" "}
+            <span dir='rtl' lang='he'>ָה</span> /{" "}
+            <span dir='rtl' lang='he'>וֹ</span> /{" "}
+            <span dir='rtl' lang='he'>ךָ</span> (possessive endings, e.g.
+            "her", "his", "your")
+          </li>
+        </ol>
+      </section>
+
+      <p className='mt-4 mb-8 text-sm text-ink-soft'>
+        Want to practice? Pick a line from any Tefillah and see how many of
+        these roots you can spot in it.
+      </p>
+    </div>
+  );
+
+  return (
+    <main className='text-center'>
+      <h1 className='text-xl font-bold text-ink'>Shorashim</h1>
+      <p className='mt-1 text-sm text-ink-soft'>Roots</p>
+
+      <div className='mt-4 flex flex-wrap justify-center gap-2'>
+        <button
+          type='button'
+          onClick={() => setRainbowOn((on) => !on)}
+          aria-pressed={rainbowOn}
+          className='hidden items-center gap-2 rounded-full border border-line bg-surface px-4 py-1.5 text-xs font-medium text-ink-soft sm:inline-flex'
+        >
+          <span aria-hidden='true'>🌈</span>
+          {rainbowOn ? "Rainbow mode on" : "Rainbow mode off"}
+        </button>
+        <button
+          type='button'
+          onClick={() => setTalmudOn((on) => !on)}
+          aria-pressed={talmudOn}
+          className='hidden items-center gap-2 rounded-full border border-line bg-surface px-4 py-1.5 text-xs font-medium text-ink-soft sm:inline-flex'
+        >
+          <span aria-hidden='true'>📜</span>
+          {talmudOn ? "Talmud mode on" : "Talmud mode off"}
+        </button>
+      </div>
+
+      <div
+        className={
+          talmudOn
+            ? "mt-8 sm:grid sm:grid-cols-[minmax(100px,1fr)_minmax(0,680px)_minmax(100px,1fr)] sm:items-start sm:gap-6"
+            : "mt-8"
+        }
+      >
+        {talmudOn && renderMargin(leftSlugs)}
+        {talmudOn ? <div className='mx-auto w-full max-w-[680px]'>{centerContent}</div> : centerContent}
+        {talmudOn && renderMargin(rightSlugs)}
+      </div>
+    </main>
+  );
+}
