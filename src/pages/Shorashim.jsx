@@ -78,7 +78,10 @@ function RootBubble({ root, color, talmudOn, isOpen, onToggle }) {
         </span>
         <span className='text-xs font-medium'>{root.translit}</span>
         <span className='text-xs opacity-80'>{root.meaning}</span>
-        <span className='sr-only'> — view every form of this root in the siddur</span>
+        <span className='sr-only'>
+          {" "}
+          — view every form of this root in the siddur
+        </span>
       </Link>
     </li>
   );
@@ -172,7 +175,9 @@ export default function Shorashim() {
   // show. Mobile always gets the normal bubble/card view. This mirrors
   // Tailwind's `sm` breakpoint (640px) so it lines up with the CSS.
   const [talmudOn, setTalmudOn] = useState(
-    () => typeof window !== "undefined" && window.matchMedia("(min-width: 640px)").matches
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(min-width: 640px)").matches,
   );
 
   // `bySlot` maps a ring position to whichever root slug currently occupies
@@ -191,7 +196,7 @@ export default function Shorashim() {
   const toggleRoot = (slug) => {
     setRing((prev) => {
       const openPosition = Object.keys(prev.bySlot).find(
-        (pos) => prev.bySlot[pos] === slug
+        (pos) => prev.bySlot[pos] === slug,
       );
       // Already open — close it, freeing that position without touching
       // the rotation cursor.
@@ -218,24 +223,21 @@ export default function Shorashim() {
       return <AgedPageBox />;
     }
     return (
-      <MarginCard
-        root={rootBySlug[slug]}
-        onClose={() => toggleRoot(slug)}
-      />
+      <MarginCard root={rootBySlug[slug]} onClose={() => toggleRoot(slug)} />
     );
   };
 
   const centerContent = (
     <div className='text-left'>
       {!talmudOn && (
-        <div className='rounded-lg border border-line bg-surface p-4'>
+        <div className='rounded-lg border border-line bg-parchment p-4'>
           <p className='text-sm leading-relaxed text-ink-soft'>
-            Most Hebrew words build outward from a three-letter root. The
-            roots below appear hundreds, sometimes thousands, of times
-            across the Tanach and the siddur, so mastering even a small
-            selection means you'll start recognizing them everywhere. Tap a
-            root to see every form of it that appears in the prayers, with
-            links back to where each one is used.
+            Most Hebrew words build outward from a three-letter root. The roots
+            below appear hundreds, sometimes thousands, of times across the
+            Tanach and the siddur, so mastering even a small selection means
+            you'll start recognizing them everywhere. Tap a root to see every
+            form of it that appears in the prayers, with links back to where
+            each one is used.
           </p>
         </div>
       )}
@@ -244,9 +246,7 @@ export default function Shorashim() {
         <div className='space-y-2 text-center'>
           {categories.map((category) => (
             <div key={category.title}>
-              <h2 className='text-lg font-medium text-ink'>
-                {category.title}
-              </h2>
+              <h2 className='text-lg font-medium text-ink'>{category.title}</h2>
               <ul className='flex flex-wrap justify-center gap-x-3 gap-y-0'>
                 {category.roots.map((root) => (
                   <RootBubble
@@ -267,7 +267,7 @@ export default function Shorashim() {
           {categories.map((category) => (
             <section
               key={category.title}
-              className='rounded-lg border border-line bg-surface p-4'
+              className='rounded-lg border border-line bg-parchment p-4'
             >
               <h2 className='mb-3 flex items-center gap-2 text-lg font-medium text-ink'>
                 <span aria-hidden='true'>{category.emoji}</span>
@@ -291,42 +291,86 @@ export default function Shorashim() {
       )}
 
       {!talmudOn && (
-        <section className='mt-4 rounded-lg border border-line bg-surface p-4'>
+        <section className='mt-4 rounded-lg border border-line bg-parchment p-4'>
           <h2 className='mb-2 flex items-center gap-2 text-lg font-medium text-ink'>
             <span aria-hidden='true'>💡</span>
             Spotting the root in a word
           </h2>
           <p className='mb-3 text-sm leading-relaxed text-ink-soft'>
-            A word is rarely just its root. Prefixes and suffixes get added
-            for tense, pronoun, and number, so a word can look longer and
-            less familiar than the three-letter root underneath. To find
-            it, mentally strip away:
+            A word is rarely just its root. Prefixes and suffixes get added for
+            tense, pronoun, and number, so a word can look longer and less
+            familiar than the three-letter root underneath. To find it, mentally
+            strip away:
           </p>
           <ol className='list-decimal space-y-2 pl-5 text-sm leading-relaxed text-ink-soft'>
             <li>
               <span className='text-ink'>Pronoun prefixes:</span>{" "}
-              <span dir='rtl' lang='he'>י</span> (he),{" "}
-              <span dir='rtl' lang='he'>ת</span> (you/she),{" "}
-              <span dir='rtl' lang='he'>א</span> (I),{" "}
-              <span dir='rtl' lang='he'>נ</span> (we)
+              <span dir='rtl' lang='he'>
+                י
+              </span>{" "}
+              (he),{" "}
+              <span dir='rtl' lang='he'>
+                ת
+              </span>{" "}
+              (you/she),{" "}
+              <span dir='rtl' lang='he'>
+                א
+              </span>{" "}
+              (I),{" "}
+              <span dir='rtl' lang='he'>
+                נ
+              </span>{" "}
+              (we)
             </li>
             <li>
               <span className='text-ink'>Grammatical prefixes:</span>{" "}
-              <span dir='rtl' lang='he'>ה</span> (the, or causative),{" "}
-              <span dir='rtl' lang='he'>ו</span> (and),{" "}
-              <span dir='rtl' lang='he'>ב</span> (in),{" "}
-              <span dir='rtl' lang='he'>כ</span> (like),{" "}
-              <span dir='rtl' lang='he'>ל</span> (to),{" "}
-              <span dir='rtl' lang='he'>מ</span> (from)
+              <span dir='rtl' lang='he'>
+                ה
+              </span>{" "}
+              (the, or causative),{" "}
+              <span dir='rtl' lang='he'>
+                ו
+              </span>{" "}
+              (and),{" "}
+              <span dir='rtl' lang='he'>
+                ב
+              </span>{" "}
+              (in),{" "}
+              <span dir='rtl' lang='he'>
+                כ
+              </span>{" "}
+              (like),{" "}
+              <span dir='rtl' lang='he'>
+                ל
+              </span>{" "}
+              (to),{" "}
+              <span dir='rtl' lang='he'>
+                מ
+              </span>{" "}
+              (from)
             </li>
             <li>
               <span className='text-ink'>Suffixes:</span>{" "}
-              <span dir='rtl' lang='he'>וֹת</span> /{" "}
-              <span dir='rtl' lang='he'>ִים</span> (plurals),{" "}
-              <span dir='rtl' lang='he'>ָה</span> /{" "}
-              <span dir='rtl' lang='he'>וֹ</span> /{" "}
-              <span dir='rtl' lang='he'>ךָ</span> (possessive endings, e.g.
-              "her", "his", "your")
+              <span dir='rtl' lang='he'>
+                וֹת
+              </span>{" "}
+              /{" "}
+              <span dir='rtl' lang='he'>
+                ִים
+              </span>{" "}
+              (plurals),{" "}
+              <span dir='rtl' lang='he'>
+                ָה
+              </span>{" "}
+              /{" "}
+              <span dir='rtl' lang='he'>
+                וֹ
+              </span>{" "}
+              /{" "}
+              <span dir='rtl' lang='he'>
+                ךָ
+              </span>{" "}
+              (possessive endings, e.g. "her", "his", "your")
             </li>
           </ol>
         </section>
@@ -374,8 +418,10 @@ export default function Shorashim() {
             <div
               className='relative grid max-h-full gap-3 transition-all duration-300 ease-in-out'
               style={{
-                gridTemplateAreas: '"left top top" "left center right" "bottom bottom right"',
-                gridTemplateColumns: "minmax(160px, 220px) minmax(300px, 560px) minmax(160px, 220px)",
+                gridTemplateAreas:
+                  '"left top top" "left center right" "bottom bottom right"',
+                gridTemplateColumns:
+                  "minmax(160px, 220px) minmax(300px, 560px) minmax(160px, 220px)",
                 gridTemplateRows: "minmax(140px, auto) 1fr minmax(140px, auto)",
               }}
             >
