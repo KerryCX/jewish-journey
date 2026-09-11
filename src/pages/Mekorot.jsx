@@ -36,8 +36,7 @@ const resources = [
 export default function Mekorot() {
   return (
     <main className='text-center'>
-      <h1 className='text-xl font-bold text-ink'>Mekorot</h1>
-      <p className='mt-1 text-sm text-ink-soft'>Resources</p>
+      <h1 className='mt-1 text-sm text-ink-soft'>Resources</h1>
 
       <ul className='mt-8 space-y-4 text-left'>
         {resources.map((r) => (
