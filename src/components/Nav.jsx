@@ -40,19 +40,17 @@ export default function Nav() {
 
   return (
     <nav className='w-full border-b border-line bg-surface'>
-      <div className='flex w-full flex-col items-center gap-2 px-4 py-3 sm:grid sm:grid-cols-[1fr_auto] sm:items-center sm:py-4'>
-        <div className='sm:flex sm:justify-center'>
-          <span
-            lang='he'
-            dir='rtl'
-            className='font-hebrew text-2xl font-bold leading-none text-ink sm:text-5xl'
-          >
-            {currentItem.hebrew}
-            <span className='sr-only'> ({currentItem.transliteration})</span>
-          </span>
-        </div>
+      <div className='relative flex w-full flex-col items-center gap-2 px-4 py-3 sm:flex-row sm:py-4'>
+        <span
+          lang='he'
+          dir='rtl'
+          className='font-hebrew text-2xl font-bold leading-none text-ink sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:text-5xl'
+        >
+          {currentItem.hebrew}
+          <span className='sr-only'> ({currentItem.transliteration})</span>
+        </span>
 
-        <ul className='flex gap-6'>
+        <ul className='flex gap-6 sm:ml-auto'>
           {navItems.map(({ to, hebrew, transliteration, english }) => (
             <li key={to} className='group relative'>
               <NavLink
