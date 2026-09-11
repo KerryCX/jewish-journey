@@ -42,7 +42,7 @@ export default function Mekorot() {
         {resources.map((r) => (
           <li
             key={r.title}
-            className='rounded-lg border border-line bg-surface p-4'
+            className='rounded-lg border border-line bg-parchment p-4'
           >
             <h2 className='text-lg font-medium text-ink'>{r.title}</h2>
             <p className='mt-1 text-sm text-ink-soft'>{r.description}</p>
