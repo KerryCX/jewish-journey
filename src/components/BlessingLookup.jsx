@@ -28,7 +28,7 @@ function BlessingLookup() {
       <select
         value={selectedIndex}
         onChange={(e) => setSelectedIndex(e.target.value)}
-        className='w-full rounded border border-line bg-surface px-3 py-2 text-center [text-align-last:center]'
+        className='w-full rounded border border-line bg-parchment px-3 py-2 text-center [text-align-last:center]'
       >
         <option value=''>choose a blessing</option>
         {blessings.map((item, index) => (
@@ -39,7 +39,7 @@ function BlessingLookup() {
       </select>
 
       {selected && (
-        <div className='flex flex-wrap justify-center gap-4 text-sm'>
+        <div className='flex flex-wrap justify-center gap-4 text-sm '>
           {TOGGLE_LABELS.map(({ key, label }) => (
             <label key={key} className='flex items-center gap-1 cursor-pointer'>
               <input
@@ -53,7 +53,7 @@ function BlessingLookup() {
         </div>
       )}
 
-      <div className='rounded-md border border-line bg-surface p-4 min-h-[40px]'>
+      <div className='rounded-md border border-line bg-parchment p-4 min-h-[40px]'>
         {!selected && (
           <p className='text-center italic text-accent'>
             Select a blessing above to see its text.
