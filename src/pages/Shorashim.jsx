@@ -318,6 +318,28 @@ export default function Shorashim() {
     >
       {talmudOn ? (
         <div className='flex min-h-0 flex-1 items-center justify-center overflow-hidden'>
+          {/*
+            Entrance animation: same spiral-in used on the individual root
+            pages, staggered clockwise (centre settles first, then top →
+            right → bottom → left). Runs once on load, including for the
+            empty dashed placeholder boxes — since these wrapper divs stay
+            mounted across re-renders, filling a box later (clicking a
+            bubble) swaps its inner content without re-triggering the
+            animation. motion-safe: skips it entirely for anyone with
+            reduced-motion enabled.
+          */}
+          <style>{`
+            @keyframes spiral-in {
+              from {
+                opacity: 0;
+                transform: scale(0.82) rotate(-8deg);
+              }
+              to {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+              }
+            }
+          `}</style>
           <div
             className='grid max-h-full gap-3 transition-all duration-300 ease-in-out'
             style={{
@@ -327,11 +349,21 @@ export default function Shorashim() {
             }}
           >
             {RING_POSITIONS.map((position) => (
-              <div key={position} style={{ gridArea: position }} className='h-full overflow-y-auto'>
+              <div
+                key={position}
+                style={{
+                  gridArea: position,
+                  animationDelay: `${(RING_POSITIONS.indexOf(position) + 1) * 120}ms`,
+                }}
+                className='h-full overflow-y-auto motion-safe:animate-[spiral-in_0.6s_ease-out_backwards]'
+              >
                 {renderSlot(position)}
               </div>
             ))}
-            <div style={{ gridArea: "center" }} className='px-1'>
+            <div
+              style={{ gridArea: "center", animationDelay: "0ms" }}
+              className='px-1 motion-safe:animate-[spiral-in_0.6s_ease-out_backwards]'
+            >
               {centerContent}
             </div>
           </div>
