@@ -23,7 +23,7 @@ function Tefillot() {
             setSelectedIndex(e.target.value);
             setShowTransliteration(false);
           }}
-          className='w-full rounded border border-line bg-surface px-3 py-2 text-center [text-align-last:center]'
+          className='w-full rounded border border-line bg-parchment px-3 py-2 text-center [text-align-last:center]'
         >
           <option value=''>choose a prayer</option>
           {tefillot.map((prayer, index) => (
@@ -47,7 +47,7 @@ function Tefillot() {
           </div>
         )}
 
-        <div className='rounded-md border border-line bg-surface p-4 space-y-6'>
+        <div className='rounded-md border border-line bg-parchment p-4 space-y-6'>
           {!selected && (
             <p className='text-center italic text-accent'>
               Select a prayer above to see its text.
