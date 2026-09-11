@@ -18,10 +18,9 @@ function App() {
             element={
               <div className='mx-auto max-w-md px-5 py-10'>
                 <header className='mb-6 text-center'>
-                  <h1 className='text-xl font-bold'>Berakhot</h1>
-                  <p className='mt-1 text-sm text-ink-soft'>
+                  <h1 className='mt-1 text-sm text-ink-soft'>
                     Blessings to Know by Heart
-                  </p>
+                  </h1>
                 </header>
                 <main>
                   <BlessingLookup />

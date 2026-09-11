@@ -11,10 +11,9 @@ function Tefillot() {
   return (
     <>
       <header className='mb-6 text-center'>
-        <h1 className='text-xl font-bold'>Tefillot</h1>
-        <p className='mt-1 text-sm text-ink-soft'>
+        <h1 className='mt-1 text-sm text-ink-soft'>
           Texts to read confidently before Beit Din
-        </p>
+        </h1>
       </header>
 
       <main className='space-y-4'>
