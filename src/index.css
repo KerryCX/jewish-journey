@@ -1,12 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  --color-base: #d6fdff;       /* page background */
-  --color-ink: #000250;        /* primary text */
-  --color-surface: #f5ffff;    /* card/surface background */
-  --color-line: #5c8bb8;       /* default border */
-  --color-ink-soft: #001e68;   /* secondary text (tagline) */
-  --color-accent: #005eb8;     /* tertiary text (placeholder) */
+  --color-base: #8fbdec; /* page background */
+  --color-ink: #000250; /* primary text */
+  --color-surface: #f5ffff; /* card/surface background */
+  --color-line: #5c8bb8; /* default border */
+  --color-ink-soft: #001e68; /* secondary text (tagline) */
+  --color-accent: #005eb8; /* tertiary text (placeholder) */
+  --color-nav: #e3edf7; /* nav background */
 
   --font-hebrew: "Frank Ruhl Libre", serif;
+
+  --color-parchment-1: #efe6d2;
+  --color-parchment-2: #e7dbc0;
+  --color-parchment-3: #ddcda8;
+  --color-parchment-ink: #3b2f1f;
+}
+
+/* Outside @theme — plain CSS, not a design token */
+.bg-parchment {
+  background: linear-gradient(
+    135deg,
+    var(--color-parchment-1) 0%,
+    var(--color-parchment-2) 45%,
+    var(--color-parchment-3) 100%
+  );
+}
+
+.bg-parchment-overlay {
+  background:
+    radial-gradient(
+      circle at 22% 28%,
+      rgba(120, 95, 60, 0.12) 0%,
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 78% 72%,
+      rgba(120, 95, 60, 0.12) 0%,
+      transparent 42%
+    );
 }

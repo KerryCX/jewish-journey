@@ -35,11 +35,11 @@ export default function Nav() {
   // exact "/shorashim" path.
   const currentItem =
     navItems.find((item) =>
-      item.to === "/" ? pathname === "/" : pathname.startsWith(item.to)
+      item.to === "/" ? pathname === "/" : pathname.startsWith(item.to),
     ) ?? navItems[0];
 
   return (
-    <nav className='w-full border-b border-line bg-surface'>
+    <nav className='w-full border-b border-line bg-nav'>
       <div className='relative flex w-full flex-col items-center gap-2 px-4 py-3 sm:flex-row sm:py-4'>
         <span
           lang='he'
@@ -71,7 +71,10 @@ export default function Nav() {
                     >
                       {hebrew}
                     </span>
-                    <span aria-hidden='true' className='hidden text-ink-soft sm:inline'>
+                    <span
+                      aria-hidden='true'
+                      className='hidden text-ink-soft sm:inline'
+                    >
                       -
                     </span>
                     <span
