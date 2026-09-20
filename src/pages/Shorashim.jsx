@@ -2,6 +2,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { categories, rootBySlug, colorForSlug } from "../data/shorashim";
+import {
+  RING_POSITIONS,
+  createEmptyRing,
+  applyRingToggle,
+  isSlugOpen,
+} from "../utils/ring";
 
 /**
  * Shorashim (Hebrew roots) overview page.
@@ -13,6 +19,10 @@ import { categories, rootBySlug, colorForSlug } from "../data/shorashim";
  * talmudDetail) lives in src/data/shorashim.js — this file and
  * RootDetail.jsx both read from that same source rather than keeping
  * their own copies.
+ *
+ * The ring rotation logic (clockwise fill order, eviction once all four
+ * positions are taken) lives in src/utils/ring.js as pure functions, so
+ * it can be unit tested without rendering anything.
  *
  * Talmud mode isn't a toggle — it's simply what desktop widths show.
  * Mobile always gets the normal bubble grid with links to each root's own
@@ -159,17 +169,6 @@ function AgedPageBox() {
   );
 }
 
-// Four boxes, pinwheeling clockwise around the centre — each one a
-// rectangle spanning two grid cells, its inner edge running flush along
-// the centre column:
-//   top:    top row,    centre column → right edge
-//   right:  right col,  middle row → bottom edge
-//   bottom: bottom row, left edge → centre column
-//   left:   left col,   top row → middle row
-// New roots fill in this order; once all four are taken, the next click
-// overwrites whichever was filled first, then the second, and so on.
-const RING_POSITIONS = ["top", "right", "bottom", "left"];
-
 export default function Shorashim() {
   // Talmud mode isn't a manual toggle — it's simply what desktop widths
   // show. Mobile always gets the normal bubble/card view. This mirrors
@@ -180,11 +179,9 @@ export default function Shorashim() {
       window.matchMedia("(min-width: 640px)").matches,
   );
 
-  // `bySlot` maps a ring position to whichever root slug currently occupies
-  // it. `next` is a rotating cursor into RING_POSITIONS: it only advances
-  // when a genuinely new root is opened, so replacement always proceeds in
-  // the same clockwise order regardless of what's been closed manually.
-  const [ring, setRing] = useState({ bySlot: {}, next: 0 });
+  // Ring state and its rotation cursor — see src/utils/ring.js for the
+  // actual fill/evict logic, kept pure and tested separately.
+  const [ring, setRing] = useState(createEmptyRing);
 
   useEffect(() => {
     const mql = window.matchMedia("(min-width: 640px)");
@@ -194,28 +191,10 @@ export default function Shorashim() {
   }, []);
 
   const toggleRoot = (slug) => {
-    setRing((prev) => {
-      const openPosition = Object.keys(prev.bySlot).find(
-        (pos) => prev.bySlot[pos] === slug,
-      );
-      // Already open — close it, freeing that position without touching
-      // the rotation cursor.
-      if (openPosition) {
-        const bySlot = { ...prev.bySlot };
-        delete bySlot[openPosition];
-        return { ...prev, bySlot };
-      }
-      // Not open — claim the next position in clockwise order, evicting
-      // whatever (if anything) was already sitting there.
-      const position = RING_POSITIONS[prev.next % RING_POSITIONS.length];
-      return {
-        bySlot: { ...prev.bySlot, [position]: slug },
-        next: prev.next + 1,
-      };
-    });
+    setRing((prev) => applyRingToggle(prev, slug));
   };
 
-  const isRootOpen = (slug) => Object.values(ring.bySlot).includes(slug);
+  const isRootOpen = (slug) => isSlugOpen(ring, slug);
 
   const renderSlot = (position) => {
     const slug = ring.bySlot[position];
