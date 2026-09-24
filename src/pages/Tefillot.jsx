@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import tefillot from "../data/tefillot.json";
+import TransliterationNote from "../components/TransliterationNote";
 
 function Tefillot() {
   const [selectedIndex, setSelectedIndex] = useState("");
@@ -132,6 +132,7 @@ function Tefillot() {
             </>
           )}
         </div>
+        {selected && <TransliterationNote show={showTransliteration} />}
       </main>
     </>
   );
