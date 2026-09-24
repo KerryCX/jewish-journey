@@ -1,0 +1,137 @@
+[
+  {
+    "id": "kaddish-chatzi",
+    "name": "Kaddish - Chatzi (Half Kaddish)",
+    "whenSpokenUrl": "https://www.youtube.com/watch?v=3feYNpX05pM",
+    "sections": [
+      {
+        "label": "Chatzi Kaddish",
+        "note": "Chatzi Kaddish marks a transition between sections of the service, rather than closing it. It's typically said before Barechu, between Pesukei D'Zimrah and the Shema/Amidah, and before Musaf on Shabbat.",
+        "hebrew": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא\nבְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ,\nוְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן\nוּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית\nיִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב,\nוְאִמְרוּ: אָמֵן.\n\nיְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם\nוּלְעָלְמֵי עָלְמַיָּא.\n\nיִתְבָּרַךְ וְיִשְׁתַּבַּח,\nוְיִתְרוֹמַם וְיִתְנַשֵּׂא, וְיִתְהַדָּר\nוְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקוּדְשָׁא,\nבְּרִיךְ הוּא,\nלְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא\nתֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן\nבְּעָלְמָא, וְאִמְרוּ: אָמֵן.",
+        "sentences": [
+          {
+            "hebrew": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא",
+            "transliteration": "Yitgadal v'yitkadash sh'mei raba"
+          },
+          {
+            "hebrew": "בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ",
+            "transliteration": "B'alma di v'ra khirutei"
+          },
+          {
+            "hebrew": "וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ: אָמֵן.",
+            "transliteration": "V'yamlikh malcutei b'khayeikhon uv'yomeikhon uv'khayei d'col beit Yisrael, ba'agala uvizman kariv, v'im'ru: Amen."
+          },
+          {
+            "hebrew": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא.",
+            "transliteration": "Y'hei sh'mei raba m'varakh l'alam ul'almei almaya."
+          },
+          {
+            "hebrew": "יִתְבָּרַךְ וְיִשְׁתַּבַּח, וְיִתְרוֹמַם וְיִתְנַשֵּׂא, וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְּקוּדְשָׁא, בְּרִיךְ הוּא,",
+            "transliteration": "Yitbarakh v'yishtabakh, v'yitromam v'yitnasei, v'yit'hadar v'yit'aleh v'yit'halal sh'mei d'kudsha, b'rikh hu,"
+          },
+          {
+            "hebrew": "לְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ: אָמֵן.",
+            "transliteration": "L'eila min col bircata v'shirata tushb'khata v'nekhemata da'amiran b'alma, v'im'ru: Amen."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kaddish-yatom",
+    "name": "Kaddish - Mourner's (Yatom)",
+    "whenSpokenUrl": "https://www.youtube.com/watch?v=luk85AVuHCg",
+    "transliterationUrl": "https://www.ljresourcebank.org/wp-content/uploads/2015/07/Transliteration-for-Shabbat-Morning-Services.pdf",
+    "sections": [
+      {
+        "label": "Mourner's Kaddish",
+        "note": "Mourner's Kaddish is typically recited near the very end of the service, usually after Aleinu.",
+        "hebrew": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא\nבְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ\nוְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן\nוּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית\nיִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב,\nוְאִמְרוּ: אָמֵן.\n\nיְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם\nוּלְעָלְמֵי עָלְמַיָּא.\n\nיִתְבָּרַךְ וְיִשְׁתַּבַּח, וְיִתְפָּאַר\nוְיִתְרוֹמַם וְיִתְנַשֵּׂא, וְיִתְהַדָּר\nוְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא,\nבְּרִיךְ הוּא,\nלְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא\nתֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן\nבְּעָלְמָא, וְאִמְרוּ: אָמֵן.\n\nיְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים\nעָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל, וְאִמְרוּ:\nאָמֵן.\n\nעֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו, הוּא יַעֲשֶׂה\nשָׁלוֹם עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל\nוְעַל כָּל־בְּנֵי אָדָם, וְאִמְרוּ: אָמֵן.",
+        "sentences": [
+          {
+            "hebrew": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא",
+            "transliteration": "Yitgadal v'yitkadash sh'mei raba"
+          },
+          {
+            "hebrew": "בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ",
+            "transliteration": "B'alma di v'ra khirutei"
+          },
+          {
+            "hebrew": "וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ: אָמֵן.",
+            "transliteration": "V'yamlikh malcutei b'khayeikhon uv'yomeikhon uv'khayei d'col beit Yisrael, ba'agala uvizman kariv, v'im'ru: Amen."
+          },
+          {
+            "hebrew": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא.",
+            "transliteration": "Y'hei sh'mei raba m'varakh l'alam ul'almei almaya."
+          },
+          {
+            "hebrew": "יִתְבָּרַךְ וְיִשְׁתַּבַּח, וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא, וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא, בְּרִיךְ הוּא,",
+            "transliteration": "Yitbarakh v'yishtabakh, v'yitpa'ar v'yitromam v'yitnasei, v'yit'hadar v'yit'aleh v'yit'halal sh'mei d'kudsha, b'rikh hu,"
+          },
+          {
+            "hebrew": "לְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ: אָמֵן.",
+            "transliteration": "L'eila min col bircata v'shirata tushb'khata v'nekhemata da'amiran b'alma, v'im'ru: Amen."
+          },
+          {
+            "hebrew": "יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל, וְאִמְרוּ: אָמֵן.",
+            "transliteration": "Y'hei sh'lama raba min sh'maya v'khayim aleinu v'al col Yisrael, v'im'ru: Amen."
+          },
+          {
+            "hebrew": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו, הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל וְעַל כָּל־בְּנֵי אָדָם, וְאִמְרוּ: אָמֵן.",
+            "transliteration": "Oseh shalom bimromav, hu ya'aseh shalom aleinu v'al col Yisrael v'al col b'nei adam, v'im'ru: Amen."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kaddish-shalem",
+    "name": "Kaddish - Shalem (Full Kaddish)",
+    "whenSpokenUrl": "https://www.youtube.com/watch?v=FlyD9Ysodcw",
+    "sections": [
+      {
+        "label": "Kaddish Shalem",
+        "hebrew": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא (Cong. אָמֵן) בְּעָלְמָא דִּי־בְרָא\nכִרְעוּתֵהּ. וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דִּכָל־\nבֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן. (Cong. אָמֵן)\n\nיְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא.\n\nיִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדַּר\nוְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דִּקוּדְשָׁא בְּרִיךְ הוּא (Cong. בְּרִיךְ הוּא)\nלְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן\nבְּעָלְמָא, וְאִמְרוּ אָמֵן. (Cong. אָמֵן)\n\nתִּתְקַבַּל צְלוֹתְהוֹן וּבָעוּתְהוֹן דִּכָל־יִשְׂרָאֵל קֳדָם אֲבוּהוֹן\nדִּי בִשְׁמַיָּא, וְאִמְרוּ אָמֵן. (Cong. אָמֵן)\n\nיְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא, וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל,\nוְאִמְרוּ אָמֵן. (Cong. אָמֵן)\n\nעֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו, הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל־כָּל־\nיִשְׂרָאֵל. וְאִמְרוּ אָמֵן. (Cong. אָמֵן)",
+        "note": "Not used in Liberal services. Included here for reference from the Authorised Daily Prayer Book (Orthodox), which calls it Kaddish Titkabel. It's said by the leader right after the Amidah. The 'Titkabel' paragraph (asking for the prayers just said to be accepted) is skipped on Purim and Tisha B'Av. Between Rosh Hashanah and Yom Kippur, an extra word is added before 'min kol birchata'.",
+        "sentences": [
+          {
+            "hebrew": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא",
+            "transliteration": "Yitgadal v'yitkadash sh'mei raba"
+          },
+          {
+            "hebrew": "בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ",
+            "transliteration": "B'alma di v'ra khirutei"
+          },
+          {
+            "hebrew": "וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דִּכָל־בֵּית יִשְׂרָאֵל, בַּעֲגָלָא וּבִזְמַן קָרִיב, וְאִמְרוּ אָמֵן.",
+            "transliteration": "V'yamlikh malcutei b'khayeikhon uv'yomeikhon uv'khayei dichol beit Yisrael, ba'agala uvizman kariv, v'im'ru: Amen."
+          },
+          {
+            "hebrew": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא.",
+            "transliteration": "Y'hei sh'mei raba m'varakh l'alam ul'almei almaya."
+          },
+          {
+            "hebrew": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדַּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דִּקוּדְשָׁא בְּרִיךְ הוּא,",
+            "transliteration": "Yitbarakh v'yishtabakh, v'yitpa'ar v'yitromam v'yitnasei, v'yit'hadar v'yit'aleh v'yit'halal sh'mei dikudsha, b'rikh hu,"
+          },
+          {
+            "hebrew": "לְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחֱמָתָא דַּאֲמִירָן בְּעָלְמָא, וְאִמְרוּ אָמֵן.",
+            "transliteration": "L'eila min col bircata v'shirata tushb'khata v'nekhemata da'amiran b'alma, v'im'ru: Amen."
+          },
+          {
+            "hebrew": "תִּתְקַבַּל צְלוֹתְהוֹן וּבָעוּתְהוֹן דִּכָל־יִשְׂרָאֵל קֳדָם אֲבוּהוֹן דִּי בִשְׁמַיָּא, וְאִמְרוּ אָמֵן.",
+            "transliteration": "Titkabal tzlot'hon uva'ut'hon dichol Yisrael kodam avuhon di vishmaya, v'im'ru: Amen."
+          },
+          {
+            "hebrew": "יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא, וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל, וְאִמְרוּ אָמֵן.",
+            "transliteration": "Y'hei sh'lama raba min sh'maya, v'khayim aleinu v'al col Yisrael, v'im'ru: Amen."
+          },
+          {
+            "hebrew": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו, הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל. וְאִמְרוּ אָמֵן.",
+            "transliteration": "Oseh shalom bimromav, hu ya'aseh shalom aleinu v'al col Yisrael. V'im'ru: Amen."
+          }
+        ]
+      }
+    ]
+  }
+]

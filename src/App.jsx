@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import BlessingLookup from "./components/BlessingLookup";
 import Tefillot from "./pages/Tefillot";
+import Other from "./pages/Other";
 import Shorashim from "./pages/Shorashim";
 import RootDetail from "./pages/RootDetail";
 import Mekorot from "./pages/Mekorot";
@@ -33,6 +34,14 @@ function App() {
             element={
               <div className='mx-auto max-w-md px-5 py-10'>
                 <Tefillot />
+              </div>
+            }
+          />
+          <Route
+            path='/other'
+            element={
+              <div className='mx-auto max-w-md px-5 py-10'>
+                <Other />
               </div>
             }
           />

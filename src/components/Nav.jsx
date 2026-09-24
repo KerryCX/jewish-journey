@@ -15,6 +15,12 @@ const navItems = [
     english: "Prayers",
   },
   {
+    to: "/other",
+    hebrew: "נוֹסָף",
+    transliteration: "Nosef",
+    english: "Other",
+  },
+  {
     to: "/shorashim",
     hebrew: "שָׁרָשִׁים",
     transliteration: "Shorashim",

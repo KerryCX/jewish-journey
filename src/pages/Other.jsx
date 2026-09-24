@@ -1,18 +1,18 @@
 import { useState } from "react";
-import tefillot from "../data/tefillot.json";
+import other from "../data/other.json";
 import TransliterationNote from "../components/TransliterationNote";
 
-function Tefillot() {
+function Other() {
   const [selectedIndex, setSelectedIndex] = useState("");
   const [showTransliteration, setShowTransliteration] = useState(false);
 
-  const selected = selectedIndex === "" ? null : tefillot[selectedIndex];
+  const selected = selectedIndex === "" ? null : other[selectedIndex];
 
   return (
     <>
       <header className='mb-6 text-center'>
         <h1 className='mt-1 text-sm text-ink-soft'>
-          Texts to read confidently before Beit Din
+          Other prayers and things to learn
         </h1>
       </header>
 
@@ -26,7 +26,7 @@ function Tefillot() {
           className='w-full rounded border border-line bg-parchment px-3 py-2 text-center [text-align-last:center]'
         >
           <option value=''>choose a prayer</option>
-          {tefillot.map((prayer, index) => (
+          {other.map((prayer, index) => (
             <option key={prayer.id} value={index}>
               {prayer.name}
             </option>
@@ -128,6 +128,16 @@ function Tefillot() {
                     Transliteration PDF
                   </a>
                 )}
+                {selected.whenSpokenUrl && (
+                  <a
+                    href={selected.whenSpokenUrl}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='underline underline-offset-2 hover:text-ink'
+                  >
+                    When it's spoken
+                  </a>
+                )}
               </div>
             </>
           )}
@@ -138,4 +148,4 @@ function Tefillot() {
   );
 }
 
-export default Tefillot;
+export default Other;
