@@ -50,7 +50,7 @@ export default function Nav() {
         <span
           lang='he'
           dir='rtl'
-          className='font-hebrew text-2xl font-bold leading-none text-ink sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:text-5xl'
+          className='font-hebrew text-2xl font-bold leading-none text-ink sm:ml-12 sm:text-5xl'
         >
           {currentItem.hebrew}
           <span className='sr-only'> ({currentItem.transliteration})</span>
