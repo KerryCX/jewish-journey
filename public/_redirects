@@ -1,1 +1,6 @@
-/* /index.html 200
+https://jj.kerryclements.com/*             https://jewishjourney.kerryclements.com/:splat 301!
+https://berakhot.kerryclements.com/*       https://jewishjourney.kerryclements.com/:splat 301!
+https://tefillot.kerryclements.com/*       https://jewishjourney.kerryclements.com/:splat 301!
+https://jewishlearning.kerryclements.com/* https://jewishjourney.kerryclements.com/:splat 301!
+
+/*    /index.html   200
