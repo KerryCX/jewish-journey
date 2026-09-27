@@ -40,7 +40,7 @@ npm run test      # watch mode
 npm run test:ui   # Vitest's browser-based dashboard
 ```
 
-Tests run automatically on pull requests via GitHub Actions (`.github/workflows/test.yml`). Pure logic — like the Shorashim ring's clockwise fill/evict rotation in `src/utils/ring.js` — is unit tested directly, without rendering anything; see `ring.test.js` alongside it for an example of the pattern.
+Tests run automatically on pull requests via GitHub Actions (`.github/workflows/ci.yml`). Pure logic — like the Shorashim ring's clockwise fill/evict rotation in `src/utils/ring.js` — is unit tested directly, without rendering anything; see `ring.test.js` alongside it for an example of the pattern.
 
 ## Project structure
 
